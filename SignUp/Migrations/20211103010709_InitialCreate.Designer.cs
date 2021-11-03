@@ -10,8 +10,8 @@ using SignUp.Data;
 namespace SignUp.Migrations
 {
     [DbContext(typeof(SignUpContext))]
-    [Migration("20211026210242_First")]
-    partial class First
+    [Migration("20211103010709_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

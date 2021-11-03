@@ -35,7 +35,7 @@ namespace SignUp.Controllers
  
 
 
-        var test = await _context.Event.Include(x => x.Person).ToListAsync();
+            //var test = await _context.Event.Include(x => x.Person).ToListAsync();
 
             return View(await _context.Event.ToListAsync());
         }
@@ -61,7 +61,7 @@ namespace SignUp.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
-            ViewBag.ListOfPersons = _context.Person.ToList();
+            //ViewBag.ListOfPersons = _context.Person.ToList();
             ViewData["PersonId"] = new SelectList(_context.Person, "Id", "PersonName");
 
             //return View();
@@ -82,7 +82,7 @@ namespace SignUp.Controllers
 
                 // Add an existing instance of the person to the event
                 //@event.Person = new 
-                //_context.Add(@event);
+                _context.Add(@event);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -98,6 +98,7 @@ namespace SignUp.Controllers
             {
                 return NotFound();
             }
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "PersonName");
 
             var @event = await _context.Event.FindAsync(id);
             if (@event == null)
@@ -118,6 +119,7 @@ namespace SignUp.Controllers
             {
                 return NotFound();
             }
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "PersonName");
 
             if (ModelState.IsValid)
             {
@@ -149,6 +151,8 @@ namespace SignUp.Controllers
             {
                 return NotFound();
             }
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "PersonName");
+            ViewBag.Person = _context.Person;
 
             var @event = await _context.Event
                 .FirstOrDefaultAsync(m => m.Id == id);
