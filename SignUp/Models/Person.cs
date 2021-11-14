@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SignUp.Models
 {
-    public class Person
+    public class Person: Base
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         [Required]
         public string PersonName { get; set; }
         public string Email { get; set; }

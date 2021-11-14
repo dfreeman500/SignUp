@@ -10,8 +10,8 @@ using SignUp.Data;
 namespace SignUp.Migrations
 {
     [DbContext(typeof(SignUpContext))]
-    [Migration("20211103010709_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20211114183857_AddTaskItemAndName")]
+    partial class AddTaskItemAndName
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,12 @@ namespace SignUp.Migrations
 
                     b.Property<string>("EventName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Item1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name1")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PersonId")

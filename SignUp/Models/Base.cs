@@ -7,6 +7,6 @@ namespace SignUp.Models
 {
     public class Base
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
     }
 }

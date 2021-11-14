@@ -73,7 +73,8 @@ namespace SignUp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,EventName,EventDate, PersonId")] Event @event)
+        //[Bind("Id,EventName,EventDate, PersonId, Item1, Name1")]
+        public async Task<IActionResult> Create( Event @event)
         {
             if (ModelState.IsValid)
             {

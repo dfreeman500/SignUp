@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SignUp.Data;
 
 namespace SignUp.Migrations
 {
     [DbContext(typeof(SignUpContext))]
-    partial class SignUpContextModelSnapshot : ModelSnapshot
+    [Migration("20211114183228_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,36 +48,6 @@ namespace SignUp.Migrations
 
                     b.Property<string>("EventName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Item1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Item2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Item3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Item4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Item5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name5")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PersonId")
