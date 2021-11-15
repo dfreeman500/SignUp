@@ -12,10 +12,10 @@ This MVC app keeps track of which volunteers sign up for tasks per event. Task i
 * Front End: HTML/CSS, Bootstrap/ JQuery
 
 ## **Getting Started**
-* Clone the project
-* Build the application
-* Enter in the volunteers (and contact information if desired).
-* Enter in the Event information.
+1.  Clone the project
+2.  Build the application
+3.  Create as many volunteers and event hosts as desired utilizing the person link.
+4.  Create an event using the event link. 
 
 
 ## **Code Louisville Features**
