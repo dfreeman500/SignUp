@@ -1,7 +1,7 @@
 ﻿# **SignUp**
 
 ## **Overview/Project Summary**
-This MVC app keeps track of which volunteers sign up for tasks per event. Task items are limited to per event. 
+This MVC app keeps track of which volunteers sign up for a limited number of tasks per event. 
 
 ## **Technical Summary**
 * Backend: C#
