@@ -4,6 +4,9 @@
     ViewData["Title"] = "Details";
 }
 
+@{
+    IEnumerable<dynamic> PersonClassInfo = ViewBag.person;
+}
 <h1>Details</h1>
 
 <div>
@@ -24,10 +27,81 @@
         </dd>
 
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EventDate)
+            Event Host
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EventDate)
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Model.PersonId)
+                {
+                    @i.PersonName
+                }
+            }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name1))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item2)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name2))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item3)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name3))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item4)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name4))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item5)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name5))
+                {@i.PersonName}
+        }
         </dd>
     </dl>
 </div>
