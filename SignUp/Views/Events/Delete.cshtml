@@ -30,44 +30,94 @@
             Event Host
         </dt>
         <dd class="col-sm-10">
-            @foreach (var item2 in PersonClassInfo)
+            @foreach (var i in PersonClassInfo)
             {
-                if (item2.Id == Model.PersonId)
+                if (i.Id == Model.PersonId)
                 {
-                    @item2.PersonName
+                    @i.PersonName
                 }
             }
         </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1)       ->
 
-        <div class="pair">
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Item1)
-            </dd>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Name1)
-                @foreach (var item2 in PersonClassInfo)
+
+            @foreach (var i in PersonClassInfo)
             {
-                @item2.PersonName
-                if (item2.Id == PersonClassInfo.PersonId)
-                {
-                @item2.PersonName
-                }
-            }
-
-            </dd>
-
-
-
-        </div>
+                if (i.Id == Int32.Parse(Model.Name1))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item2)       ->
 
 
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name2))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item3)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name3))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item4)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name4))
+                {@i.PersonName}
+        }
+        </dd>
+        <dt class="col-sm-2">
+            Item
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item5)       ->
+
+
+            @foreach (var i in PersonClassInfo)
+            {
+                if (i.Id == Int32.Parse(Model.Name5))
+                {@i.PersonName}
+        }
+        </dd>
 
 
     </dl>
 
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+
+
+
+
+
+
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="Index">Back to List</a>
+</form>
 </div>
