@@ -39,6 +39,29 @@
             }
         </dd>
 
+        <div class="pair">
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Item1)
+            </dd>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name1)
+                @foreach (var item2 in PersonClassInfo)
+            {
+                @item2.PersonName
+                if (item2.Id == PersonClassInfo.PersonId)
+                {
+                @item2.PersonName
+                }
+            }
+
+            </dd>
+
+
+
+        </div>
+
+
+
 
     </dl>
 
