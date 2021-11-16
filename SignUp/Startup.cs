@@ -69,6 +69,9 @@ namespace SignUp
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            //Seed Database
+            AppDbInitializer.Seed(app);
         }
     }
 }
