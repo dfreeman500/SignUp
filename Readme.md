@@ -19,6 +19,12 @@ This MVC app keeps track of which volunteers sign up for a limited number of tas
 
 
 ## **Code Louisville Features**
-* The Person and Event class inherit from the base class.
-* This app reads from an external source (SQL database) and this allows data to persist after the app has been closed. 
-* A regular expression is used for inputting the person's phone number.
+
+**Required:
+  ** Multiple classes used
+  ** Multiple functions/methods used which return values (ex: controllers return views)
+** Optional Features:
+    ** The Person and Event class inherit from the base class.
+    ** This app reads from an external source (SQL database) and this allows data to persist after the app has been closed. 
+    ** A regular expression is used for inputting the person's phone number.
+    ** Linq is used in controllers
